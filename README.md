@@ -1,6 +1,6 @@
 # Task Management Application
 
-A full-stack task manager where a registered user can create, view, update, and delete their own tasks. Built with Nuxt 4 and MongoDB, with authentication, per-user data scoping, input validation, and consistent error handling.
+A full-stack task manager where a registered user can create, view, update and delete their own tasks. Built with Nuxt 4 and MongoDB, with authentication, per-user data scoping, input validation and consistent error handling.
 
 ---
 
@@ -31,7 +31,7 @@ A full-stack task manager where a registered user can create, view, update, and 
 
 ## Prerequisites
 
-- **Node.js** 18+ and npm
+- **Node.js** 20+ and npm
 - **Docker** and Docker Compose (used to run MongoDB locally)
 
 ---
@@ -76,7 +76,7 @@ This starts a MongoDB container on `localhost:27017`. Confirm it is healthy with
 npm run dev
 ```
 
-The app is available at **http://localhost:3000**. Register an account to get started.
+The app is available at **http://localhost:your running port**. Register an account to get started.
 
 To stop MongoDB later: `docker compose down`.
 
@@ -89,7 +89,7 @@ To stop MongoDB later: `docker compose down`.
 | `NUXT_MONGODB_URI`     | MongoDB connection string                    | `mongodb://127.0.0.1:27017/taskmanager`      |
 | `NUXT_SESSION_SECRET`  | Secret used to sign session JWTs             | *(generate with the command above)*          |
 
-Both are consumed via Nuxt's `runtimeConfig`. The `.env` file is git-ignored; `.env.example` documents the required keys.
+Both are consumed via Nuxt's `runtimeConfig`. The `.env` is git-ignored; `.env.example` documents the required keys.
 
 ---
 
