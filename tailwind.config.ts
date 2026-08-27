@@ -9,6 +9,11 @@ export default {
         './layouts/**/*.{vue,ts,tsx,js,jsx}',
     ],
     darkMode: 'class',
+    safelist: [
+        'bg-status-todo/10', 'text-status-todo',
+        'bg-status-progress/10', 'text-status-progress',
+        'bg-status-done/10', 'text-status-done',
+    ],
     theme: {
         extend: {
             fontFamily: {
