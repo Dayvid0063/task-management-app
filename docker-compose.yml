@@ -1,0 +1,27 @@
+# docker-compose.yml
+services:
+  mongodb:
+    image: 'mongo:8.0.15'
+    container_name: taskmanager-mongodb
+    ports:
+      - '${MONGODB_PORT:-27017}:27017'
+    volumes:
+      - 'taskmanager-data:/data/db'
+    networks:
+      - taskmanager
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "mongosh", "--eval", "db.adminCommand('ping')"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+      start_period: 30s
+
+networks:
+  taskmanager:
+    driver: bridge
+    name: taskmanager
+
+volumes:
+  taskmanager-data:
+    driver: local
