@@ -1,0 +1,50 @@
+/* app/assets/css/main.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --color-primary: 5 150 105;
+        /* emerald-600 */
+        --color-primary-hover: 4 120 87;
+        /* emerald-700 */
+        --color-background: 248 250 252;
+        /* slate-50 */
+        --color-surface: 255 255 255;
+        /* white */
+        --color-foreground: 15 23 42;
+        /* slate-900 */
+        --color-muted: 100 116 139;
+        /* slate-500 */
+        --color-border: 226 232 240;
+        /* slate-200 */
+        --color-success: 22 163 74;
+        /* green-600 */
+        --color-danger: 220 38 38;
+        /* red-600 */
+        --color-warning: 217 119 6;
+        /* amber-600 */
+
+        /* task status */
+        --color-status-todo: 100 116 139;
+        /* slate-500 */
+        --color-status-progress: 37 99 235;
+        /* blue-600 */
+        --color-status-done: 22 163 74;
+        /* green-600 */
+    }
+
+    /* Foundation for the future dark-mode toggle (add `dark` class to <html>). */
+    .dark {
+        --color-background: 15 23 42;
+        --color-surface: 30 41 59;
+        --color-foreground: 241 245 249;
+        --color-muted: 148 163 184;
+        --color-border: 51 65 85;
+    }
+
+    body {
+        @apply bg-background text-foreground font-sans antialiased;
+    }
+}
