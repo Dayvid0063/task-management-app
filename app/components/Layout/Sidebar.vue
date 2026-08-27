@@ -36,13 +36,14 @@
 
     <div class="border-t border-border p-3">
       <div class="flex items-center gap-3 px-3 py-2">
-        <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-primary/10 text-primary text-sm font-semibold">
+        <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-primary/10 text-primary text-sm font-semibold shrink-0">
           {{ userStore.user?.firstName?.[0] || 'U' }}
         </span>
-        <div class="min-w-0">
+        <div class="min-w-0 flex-1">
           <p class="text-sm font-medium text-foreground truncate">{{ userStore.fullName || 'User' }}</p>
           <p class="text-xs text-muted truncate">{{ userStore.user?.email }}</p>
         </div>
+        <ThemeToggle />
       </div>
       <button
         class="mt-1 flex w-full items-center gap-3 px-3 py-2 rounded-lg text-sm font-medium text-muted hover:bg-danger/10 hover:text-danger transition"
